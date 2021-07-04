@@ -38,26 +38,32 @@ body {
  box-sizing: border-box;   
  display: flex;
 justify-content: center;
-text-align: center;
+/* text-align: center; */
 background: linear-gradient(hsl(273, 75%, 66%),hsl(240, 73%, 65%));
 background-repeat: no-repeat;
 }
 
 .accordion {
+    background: url(/images/bg-pattern-mobile.svg);
+    background-repeat: no-repeat;
+    background-position: top;
+    text-align: center;
 margin-left:5%;
 margin-right: 5%;
     background-color: white;
-margin-top: 10px;
 padding-left: 15px;
 padding-right: 15px;
+
+display: flex;
 flex-direction: column;
-    display: flex;
+    
     border-radius: 15px;
     height: 75%;
-
+justify-content: space-evenly
 
 }
 .accordionTitle { font-weight: 700;}
+
 
 .accordion .accordion-item.active .content {
     height:65px
@@ -69,6 +75,11 @@ flex-direction: column;
 
 .accordion-item {
     padding:10px 10px 10px 10px;
+}
+.accordion img {
+    margin-top: -50%;
+    max-height: 200px;
+   
 }
 
 .content {
@@ -83,3 +94,48 @@ flex-direction: column;
 .attribution {  font-size: 11px; text-align: center;
 background:none }
 .attribution a { color: hsl(228, 45%, 44%); }
+
+
+
+@media (min-width:1280px) {
+
+
+    .accordion {
+        display: flex;
+        flex-direction: row;
+        background: url(/images/bg-pattern-desktop.svg);
+        background-position: left -200px bottom -50px;
+        background-repeat: no-repeat;
+        background-color: white;
+        background-size: contain;
+        justify-content:space-evenly;
+        max-height: 70vh;
+        max-width: 80vw;
+        overflow:var(--Soft-violet);
+        padding: 10px 10px 10px 10px;
+        
+    } 
+
+    .accordion div:nth-last-of-type(1) {
+ 
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        
+    }  
+   
+
+
+.accordion img {
+    margin-top: 5px;
+    max-height: 600px;
+    height: 75%;
+    transform:translate(-300px,50px);
+
+}
+    
+
+
+    
+
+}
